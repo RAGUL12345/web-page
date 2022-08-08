@@ -1,0 +1,302 @@
+<html lang="en">
+<head>
+  <title>Snapflix</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+  <style>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+  html, body {
+    height: 100%;
+  }
+  body {
+      background-color: black;
+         font-size:large;font-variant: small-caps; color: rgb(248, 245, 245);
+  }
+
+  .nav {
+  background-color: black;
+  padding: 7px 7px;
+  
+}
+
+  .navbar{
+  background-color:black;
+  }
+  
+    .navbar-nav > li{
+    padding-left:15px;
+    padding-right:15px;
+}
+  
+    .nav a {
+        float: right;
+        color: #ff0000;
+        text-align: center;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      
+    .nav a:hover {
+        background-color: rgb(194, 100, 100);
+        color: rgb(0, 0, 0);
+      }
+      
+    .nav a:active {
+        background-color: rgb(255, 0, 0);
+        color: rgb(255, 255, 255);
+      }
+ 
+  .demo-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        background-color: rgb(0, 0, 0);font-size:large;font-variant: small-caps; color: rgb(248, 245, 245);
+  }
+  .btn-lg {
+    padding: 12px 26px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  ::placeholder {
+  font-size:14px;
+  letter-spacing:0.5px;
+  }
+  .form-control-lg {
+    font-size: 16px;
+    padding: 25px 20px;
+  }
+  .font-500{
+  font-weight:500;  
+  }
+  .image-size-small{
+  width:240px;
+  margin:20 auto; 
+  }
+  .image-size-small img{
+  width:240px;
+  margin-bottom:50px; 
+    margin-bottom:50px; 
+  }
+  .form-control{
+      width: 550px;
+  }
+  
+
+  </style>
+</head>
+
+<body>
+   <!--nav-->
+   <nav class="navbar navbar-inverse navbar-dark fixed-top " style="font-variant: small-caps;background-color: black;">
+  
+    <div class="container-fluid">
+  
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand"  style="font-weight:900;font-variant: small-caps;">
+          <a href="Home.html"><img src="images/snap.png" alt="" style="height: 45px; width: auto; margin-top: 15%;"></a>
+        </a>
+      </div>
+      </div>
+      </nav>
+    
+    
+      
+    </div>
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="row">
+                <div class="col-sm-12"><video autoplay muted loop>
+                    <source src="sp.mp4" type="video/mp4" />
+                </video>
+                </div>
+                
+            </div>
+            <!--/row-->
+        </div>
+        <!--/item-->
+ 
+   
+    </div>
+  </div>
+  </div>
+</div>
+  </nav>
+   </div>
+  </div>
+  <!--nav-->
+
+  <script>  
+    function validateform(){  
+    var name=document.myform.name.value;  
+    var password=document.myform.password.value; 
+    var num=document.myform.num.value; 
+      
+    var x=document.myform.email.value;  
+    var atposition=x.indexOf("@");  
+    var dotposition=x.lastIndexOf(".");
+    
+    if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+      alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+      return false;  
+      }  
+    
+    if (name==null || name==""){  
+      alert("Name can't be blank");  
+      return false;  
+    }else if(password.length<6){  
+      alert("Password must be at least 6 characters long.");  
+      return false;  
+      }   
+    
+    if (isNaN(num)){
+      document.getElementById("numloc").innerHTML="Enter Numeric value only";
+      return false;
+    }
+    else{
+      return true;
+      }
+    
+    }
+    
+    
+    </script>  
+    <div class="container-fluid" style="background-color: rgb(14, 85, 85); padding: 5px;">
+      </div>
+
+
+  <!--forms-->
+          <div class="p-5 bg-white rounded shadow-lg">
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+            <h3 class="mb-2 text-center pt-5">Signup</h3>
+            <p class="text-center lead" style="font-size: 15px;">Already have an Account?<a href="signin.html" class="text-dark font-weight-bold">Login</a>
+              <form name="myform" method="post" onsubmit="return validateform()"style="margin-left:30%;" action="Home.html">  
+                <div class="container" style="padding-bottom: 20%;">
+                    <h1>Register</h1>
+                    <p></p>
+                    <hr style="width: 260px; margin-left: 0%;">
+            <input type="text" name="name" class="form-control" style="background-color: rgb(17, 71, 71); border: hidden; color: white;" placeholder="Username" required><br><br>
+            <input type="text" name="email" class="form-control" style="background-color:  rgb(17, 71, 71); border: hidden; color: white;" placeholder="E-mail"required><br/>  <br> 
+            <input type="text" name="num" class="form-control" style="background-color:  rgb(17, 71, 71); border: hidden; color: white;" placeholder=" Mobile Number"required><span id="numloc"></span><br> <br>
+            <input type="password" name="password" class="form-control" style="background-color:  rgb(17, 71, 71); border: hidden; color: white;" placeholder="Password"required><br>
+                <p class="m-0">By clicking on Login, I accept the Terms & Conditions & Privacy Policy </p>
+            <input type="submit" value="register" style="border: 10px 10px red; padding: 7px 14px; color: white; background-color: red;">  
+                </div>
+            </form>  
+          </div>          
+          </div>        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!--forms-->
+
+
+  <div class="container-fluid" style="background-color: rgb(14, 85, 85); padding: 5px;">
+  </div>
+    <!--footer-->
+
+    <footer class="bd-footer py-5 mt-5 bg-dark" style="font-variant: small-caps;background-color: black;color: gray;">
+      <div class="container py-5">
+      <div class="footer-cta pt-7 pb-7">  
+          <div class="row">  
+              <div class="col-xl-3 col-md-3 mb-30">  
+                  <div class="single-cta">  
+                      <div class="cta-text">  
+                          <h3>Questions?</h3><h4><span class="glyphicon glyphicon-earphone"> </span> Call 000-800-040-1843</h4> <br>
+
+                          <div class="container py-5">
+      <div class="footer-cta pt-7 pb-7">  
+          <div class="row">  
+              <div class="col-xl-3 col-md-3 mb-30">  
+                  <div class="single-cta">  
+                      <div class="cta-text">  
+
+                          <p><a href="#"> FAQs </a> </p>
+                          <p><a href="#"> Investor Relations</a></p>
+                          <p><a href="#"> Privacy </a></p>
+                          <p><a href="#"> Speed Test </a></p>
+                              
+                      </div>  
+                  </div>  
+              </div>  
+              <div class="col-xl-3 col-md-3 mb-30">  
+                  <div class="single-cta">  
+                      <i class="fas fa-phone"> </i>  
+                      <div class="cta-text">   
+                          <p><a href="#"> Help Centre </a></p>
+                          <p><a href="#"> Jobs </a></p>
+                          <p><a href="#"> Cookie Preferences </a></p>
+                          <p><a href="#"> Legal notices </a></p>
+                      </div>  
+                  </div>  
+              </div>  
+              <div class="col-xl-3 col-md-3 mb-30">  
+                  <div class="single-cta">  
+                      <i class="far fa-envelope-open"> </i>  
+                      <div class="cta-text">    
+                          <p><a href="#"> Account </a></p>
+                          <p><a href="#"> Ways to Watch </a></p>
+                          <p><a href="#"> Corporate Information </a></p>
+                          <p><a href="#"> Only on Snapflix </a></p>
+                      </div>  
+                  </div>  
+              </div>  
+              <div class="col-xl-3 col-md-3 mb-30">  
+                  <div class="single-cta">  
+                      <i class="fas fa-phone"> </i>  
+                      <div class="cta-text">   
+                          <p><a href="#"> Media Centre </a></p>
+                          <p><a href="#"> Terms of Use </a></p>
+                          <p><a href="#"> Contact Us </a></p>
+                          
+                      </div>  
+                  </div>  
+              </div>  
+          </div>  
+      </div>  
+     
+  <div class="copyright-area">  
+      <div class="container">  
+          <div class="row">  
+              <div class="col-xl-19 col-lg-19 text-center">  
+                  <div class="copyright-text"> 
+                      <p></p><br> 
+                      <p> Copyright © 2022, All Right Reserved </p>  
+                  </div>  
+              </div>  
+              </div>  
+          </div>  
+      </div>  
+  </div>  
+</footer>    </div>
+  
+  <!--footer-->
+          
+
+
+ 
+
+</body>
+</html>

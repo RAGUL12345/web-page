@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Admin</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body {
+    font-variant: small-caps;
+  background: #000000;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.navbar {
+  padding: 15px 10px;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 40px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+  box-shadow: none;
+  outline: none !important;
+  border: none;
+  background: black;
+  color: white;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #ddd;
+  margin: 40px 0;
+}
+
+
+.wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background: #797a7e;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+#sidebar a,
+#sidebar a:hover,
+#sidebar a:focus {
+  color: inherit;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #09090a;
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+  border-bottom: 1px solid #060707;
+}
+
+#sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+
+#sidebar ul li a:hover {
+  color: #575353;
+  background: #fff;
+}
+
+#sidebar ul li.active > a,
+a[aria-expanded="true"] {
+  color: #fff;
+  background: #3a3636;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+a[aria-expanded="false"]::before,
+a[aria-expanded="true"]::before {
+  content: '\e259';
+  display: block;
+  position: absolute;
+  right: 20px;
+  font-family: 'Glyphicons Halflings';
+  font-size: 0.6em;
+}
+
+a[aria-expanded="true"]::before {
+  content: '\e260';
+}
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 20px !important;
+  background: #030303;
+  color: white;
+}
+
+ul.CTAs {
+  padding: 20px;
+}
+
+ul.CTAs a {
+  text-align: center;
+  font-size: 0.9em !important;
+  display: block;
+  border-radius: 5px;
+ 
+}
+
+a.download {
+  background: #fff;
+  color: #0b0c0e;
+}
+
+a.article,
+a.article:hover {
+  background: #c54263 !important;
+  color: rgb(216, 202, 210) !important;
+}
+
+
+#content {
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+#content p a {
+  color:black
+}
+
+
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -250px;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  #sidebarCollapse span {
+    display: none;
+  }
+}
+
+</style>
+</head>
+<body style="background-color: rgb(0, 0, 0);font-variant: small-caps; color: rgb(20, 17, 17);">
+
+     
+
+  <script>
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+$(document).ready(function() {
+  $("#sidebarCollapse").on("click", function() {
+    $("#sidebar").toggleClass("active");
+    $(this).toggleClass("active");
+  });
+});
+  </script>
+
+  <!--slide-->
+
+
+
+
+  <div class="wrapper">
+    <!-- Sidebar Holder -->
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <h3>SNAPFLIX</h3>
+        
+      </div>
+  
+      <ul class="list-unstyled components">
+        <p><span class="glyphicon glyphicon-asterisk"></span> Dashboard</p>
+        <li>
+          <a href="#">About</a>
+          <a href="categ.html"><span class="glyphicon glyphicon-asterisk"></span> Categories </a>
+          
+        </li>
+        <li class="active">
+          <a href="user.html"><span class="glyphicon glyphicon-asterisk"></span> Users </a>
+        </li>
+        <li>
+          <a href="prog.html"><span class="glyphicon glyphicon-asterisk"></span> Progress</span></a>
+        </li>
+     
+                
+             <ul class="list-unstyled CTAs">
+                <li><a href="Home.html" class="article">Back to page</a></li>
+              </ul>
+        </ul>
+    </nav>
+  
+    <!-- Page Content Holder -->
+    <div id="content">
+            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn" style="font-variant: small-caps;background-color: black;color: white; padding: 15px 20px;">
+                <a class="navbar-brand">
+                    <span class="glyphicon glyphicon-backward"></span>
+                  </a>
+                              </button>
+        <div class="container-fluid">
+     
+  
+        
+  
+  
+        <h1 class="sub-header" style="color: white;">
+          <div class="btn-group pull-right" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-primary">View All</button>
+        </div>
+        Most watched TV Shows of 2021<hr>
+        </h1>
+        <div class="table-responsive">
+          <table class="table table-hover table-bordered" style="background-color: rgb(26, 24, 24); color: burlywood;">
+            <thead class="thead-dark">
+              <tr>
+                <th>S.no</th>
+                <th>Name of the show</th>
+                <th>Initial Release</th>
+                <th>Total Views</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Stranger Things</td>
+                <td>2016</td>
+                <td>70.1 M</td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+                <td>Money Heist</td>
+                <td>2017</td>
+                <td>69.9 M</td>
+              </tr>
+
+              <tr>
+                <td>3</td>
+                <td>Squid Game</td>
+                <td>2021</td>
+                <td>50.4 M</td>
+              </tr>
+
+              <tr>
+                <td>4</td>
+                <td>The Witcher</td>
+                <td>2019</td>
+                <td>43 M</td>
+              </tr>
+
+              <tr>
+                <td>5</td>
+                <td>Dark</td>
+                <td>2017</td>
+                <td>41.3 M</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <h1 class="sub-header" style="color: white;">
+          <div class="btn-group pull-right" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-primary">View All</button>
+        </div>
+        Most active Accounts of 2021<hr>
+        </h1>
+        <div class="table-responsive">
+          <table class="table table-hover table-bordered" style="background-color: rgb(26, 24, 24); color:burlywood;">
+            <thead class="thead-dark">
+              <tr>
+                <th>S.no</th>
+                <th>IP Address</th>
+                <th>Period</th>
+                <th>Total no. of Hours used</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>178.188.227.51</td>
+                <td>3-4 years</td>
+                <td>89.2k hours</td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+                <td>252.229.149.148</td>
+                <td>4-5 years</td>
+                <td>84.6k hours</td>
+              </tr>
+
+              <tr>
+                <td>3</td>
+                <td>40.186.244.24</td>
+                <td>3 years</td>
+                <td>73.9k hours</td>
+              </tr>
+
+              <tr>
+                <td>4</td>
+                <td>247.75.74.154</td>
+                <td>2-3 years</td>
+                <td>60k hours</td>
+              </tr>
+
+              <tr>
+                <td>5</td>
+                <td>188.238.31.2</td>
+                <td>4 years</td>
+                <td>57.3 hours</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        
+        <h1 class="sub-header" style="color: white;">
+          <div class="btn-group pull-right" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-primary">View All</button>
+        </div>
+        New Users<hr>
+        </h1>
+        <div class="table-responsive">
+          <table class="table table-hover table-bordered" style="background-color: rgb(26, 24, 24); color: burlywood;">
+            <thead class="thead-dark">
+              <tr>
+                <th>S.no</th>
+                <th>IP Address</th>
+                <th>Package</th>
+                <th>Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>104.123.200.217</td>
+                <td>₹599</td>
+                <td>Just now</td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+                <td>175.86.141.95</td>
+                <td>₹399</td>
+                <td>Just now</td>
+              </tr>
+
+              <tr>
+                <td>3</td>
+                <td>52.74.174.239</td>
+                <td>₹599</td>
+                <td>Just now</td>
+              </tr>
+
+              <tr>
+                <td>4</td>
+                <td>2.95.152.160</td>
+                <td>₹999</td>
+                <td>1 min ago</td>
+              </tr>
+
+              <tr>
+                <td>5</td>
+                <td>121.181.173.8</td>
+                <td>₹999</td>
+                <td>1 min ago</td>
+              </tr>
+
+              
+
+
+
+
+              
+            </tbody>
+          </table>
+        </div>
+  
+  <h1 class="sub-header" style="color: white;">
+          <div class="btn-group pull-right" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-primary">View All</button>
+        </div>
+        Most watched TV Shows of 2021<hr>
+        </h1>
+        <div class="table-responsive">
+          <table class="table table-hover table-bordered" style="background-color: rgb(26, 24, 24); color: burlywood;">
+            <thead class="thead-dark">
+              <tr>
+                <th>S.no</th>
+                <th>Name of the show</th>
+                <th>Initial Release</th>
+                <th>Total Views</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Stranger Things</td>
+                <td>2016</td>
+                <td>70.1 M</td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+                <td>Money Heist</td>
+                <td>2017</td>
+                <td>69.9 M</td>
+              </tr>
+
+              <tr>
+                <td>3</td>
+                <td>Squid Game</td>
+                <td>2021</td>
+                <td>50.4 M</td>
+              </tr>
+
+              <tr>
+                <td>4</td>
+                <td>The Witcher</td>
+                <td>2019</td>
+                <td>43 M</td>
+              </tr>
+
+              <tr>
+                <td>5</td>
+                <td>Dark</td>
+                <td>2017</td>
+                <td>41.3 M</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <h1 class="sub-header" style="color: white;">
+          <div class="btn-group pull-right" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-primary">View All</button>
+        </div>
+        Most active Accounts of 2021<hr>
+        </h1>
+        <div class="table-responsive">
+          <table class="table table-hover table-bordered" style="background-color: rgb(26, 24, 24); color:burlywood;">
+            <thead class="thead-dark">
+              <tr>
+                <th>S.no</th>
+                <th>IP Address</th>
+                <th>Period</th>
+                <th>Total no. of Hours used</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>178.188.227.51</td>
+                <td>3-4 years</td>
+                <td>89.2k hours</td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+                <td>252.229.149.148</td>
+                <td>4-5 years</td>
+                <td>84.6k hours</td>
+              </tr>
+
+              <tr>
+                <td>3</td>
+                <td>40.186.244.24</td>
+                <td>3 years</td>
+                <td>73.9k hours</td>
+              </tr>
+
+              <tr>
+                <td>4</td>
+                <td>247.75.74.154</td>
+                <td>2-3 years</td>
+                <td>60k hours</td>
+              </tr>
+
+              <tr>
+                <td>5</td>
+                <td>188.238.31.2</td>
+                <td>4 years</td>
+                <td>57.3 hours</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        
+        <h1 class="sub-header" style="color: white;">
+          <div class="btn-group pull-right" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-primary">View All</button>
+        </div>
+        New Users<hr>
+        </h1>
+        <div class="table-responsive">
+          <table class="table table-hover table-bordered" style="background-color: rgb(26, 24, 24); color: burlywood;">
+            <thead class="thead-dark">
+              <tr>
+                <th>S.no</th>
+                <th>IP Address</th>
+                <th>Package</th>
+                <th>Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>104.123.200.217</td>
+                <td>₹599</td>
+                <td>Just now</td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+                <td>175.86.141.95</td>
+                <td>₹399</td>
+                <td>Just now</td>
+              </tr>
+
+              <tr>
+                <td>3</td>
+                <td>52.74.174.239</td>
+                <td>₹599</td>
+                <td>Just now</td>
+              </tr>
+
+              <tr>
+                <td>4</td>
+                <td>2.95.152.160</td>
+                <td>₹999</td>
+                <td>1 min ago</td>
+              </tr>
+
+              <tr>
+                <td>5</td>
+                <td>121.181.173.8</td>
+                <td>₹999</td>
+                <td>1 min ago</td>
+              </tr>
+
+              
+
+
+
+
+              
+            </tbody>
+          </table>
+        </div>
+  
+  
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+
+   <!--side nav-->
+          
+
+
+ 
+
+</body>
+</html>
