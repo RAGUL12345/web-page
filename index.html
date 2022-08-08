@@ -1,0 +1,423 @@
+<html>
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="">
+  <style>
+
+      body{
+          background-image: url("bg1.jpg")
+      }
+      .nav {
+  background-color: black;
+  padding: 7px 7px;
+  
+}
+
+  .navbar{
+  background-color:black;
+  }
+  
+    .navbar-nav > li{
+    padding-left:15px;
+    padding-right:15px;
+}
+  
+    .nav a {
+        float: right;
+        color: #ff0000;
+        text-align: center;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      
+    .nav a:hover {
+        background-color: rgb(194, 100, 100);
+        color: rgb(0, 0, 0);
+      }
+      
+    .nav a:active {
+        background-color: rgb(255, 0, 0);
+        color: rgb(255, 255, 255);
+      }
+ 
+    .carousel-control {
+padding-top:10%;
+width:5%;
+}
+
+    .container0{
+        background-color:rgb(15, 15, 15);
+        height: 28%;
+        width: 100%;
+    }
+
+    .container1{
+        background-image: url("bg1.jpg");
+        height:auto;
+        width:auto;
+    }
+
+    .dropdown-menu{
+        background-color:rgb(0, 0, 0) ;
+        color: white;
+    }
+
+    .dropdown-menu a{
+        padding: 13px 13px;
+    }
+
+    .dropdown1 a:hover{
+        background-color: rgb(23, 65, 65);
+        color: white;
+    }
+
+    .dropdown1 a:active{
+        background-color: white;
+        color: black;
+    }
+
+            /*jssor slider loading skin spin css*/
+            .jssorl-009-spin img {
+            animation-name: jssorl-009-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes jssorl-009-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        
+
+    
+</style>
+<script>
+    $(document).ready(function() {
+$('#myCarousel').carousel({
+interval: 2500
+})
+
+$('#myCarousel').on('slid.bs.carousel', function() {
+    //alert("slid");
+});
+
+
+});
+
+$(document).ready(function() {
+$('#Carousel1').carousel({
+interval: false
+})
+
+$('#Carousel1').on('slid.bs.carousel', function() {
+    //alert("slid");
+});
+
+
+});
+
+$(document).ready(function() {
+$('#Carousel2').carousel({
+interval: false
+})
+
+$('#Carousel2').on('slid.bs.carousel', function() {
+    //alert("slid");
+});
+
+
+});
+
+$(document).ready(function() {
+$('#Carousel3').carousel({
+interval: false
+})
+
+$('#Carousel').on('slid.bs.carousel', function() {
+    //alert("slid");
+});
+
+
+});
+
+$(document).ready(function() {
+$('#Carousel3').carousel({
+interval: false
+})
+
+$('#Carousel3').on('slid.bs.carousel', function() {
+    //alert("slid");
+});
+
+
+});
+
+$(document).ready(function() {
+$('#Carousel4').carousel({
+interval: false
+})
+
+$('#Carousel4').on('slid.bs.carousel', function() {
+    //alert("slid");
+});
+
+
+});
+
+
+</script>
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse navbar-dark fixed-top " style="font-variant: small-caps;background-color: black;">
+  
+        <div class="container-fluid">
+      
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand"  style="font-weight:900;font-variant: small-caps;">
+              <a href="categ.html"><img src="images/snap.png" alt="" style="height: 45px; width: auto; margin-top: 15%;"></a>
+            </a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+      
+      <ul style="margin-top: 13px;" class="nav navbar-nav navbar-left">
+            <li><a href="tvshows.html"> TV Shows</a></li>
+            <li><a href="movies.html"> Movies</a></li>
+            <li><a href="popular.html"> Popular</a></li>
+            <li><a href="list.html"> My List</a></li>
+          </ul>
+         <ul style="margin-top: 12px;" class="nav navbar-nav navbar-right">
+            <li><form class="navbar-form navbar-right" action="">
+        <div class="input-group">
+          <input type="text" class="form-control" style="min-width: 350px; background-color: rgb(4, 39, 39);" placeholder="Search...">
+          <div class="input-group-btn">
+            <button style="height: 34px; width: auto;" class="btn btn-danger" type="submit">
+              <i class="glyphicon glyphicon-search"></i>
+            </button>
+          </div>
+        </div>
+      </form></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-bell"></span></a>
+                <span class=""></span></a>
+                <ul class="dropdown-menu pull-right">
+                    <div class="dropdown1">
+                  <li><a style="color: white; text-align: left;width: 100%; font-size: 13px;" href="#">Jshree has suggested you a movie</a></li>
+                  <li><a style="color: white; text-align: left;width: 100%; font-size: 13px;" href="#">Anish gave you a Friend request</a></li>
+                  <li><a style="color: white; text-align: left;width: 100%; font-size: 13px;" href="#">Renjith liked your message</a></li></div>
+                </ul>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span width: auto;" class="glyphicon glyphicon-user"></span></a>
+                    <span class=""></span></a>
+                    <ul class="dropdown-menu pull-right">
+                        <div class="dropdown1">
+                      <li><a style="color: white; text-align: left;width: 100%;" href="">Account</a></li>
+                      <li><a style="color: white; text-align: left;width: 100%;" href="FAQs.html">FAQs</a></li>
+                      <li><a style="color: white; text-align: left;width: 100%;" href="help.html">Help</a></li>
+                      <li><a href="list.html" style="color: white; text-align: left;width: 100%;">Watchlist</a></li>
+                      <li><a href="form.html" style="color: white; text-align: left;width: 100%;">Logout</a></li></></div>
+                    </ul>
+          </ul>
+        </div>
+        </div>
+        </nav>
+      
+      
+
+<div class="container1";>
+<div style="margin-right: 8%; margin-left: 8%;">
+    <div class="col-sm-16">
+         <h1></h1>
+
+        <div class="" >
+            <div id="myCarousel" class="carousel slide">
+                
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row">
+                            <div class="col-sm-12"><a href="#x"><img src="spidey.jpg" alt="Image" class="img-responsive"></a>
+                            </div>
+                            
+                        </div>
+                        <!--/row-->
+                    </div>
+                    <!--/item-->
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-sm-12"><a href="#x" class=""><img src="cont.jpeg" alt="Image" class="img-responsive"></a>
+                            </div>
+                            
+                        </div>
+                        <!--/row-->
+                    </div>
+                    <!--/item-->
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-sm-12"><a href="#x" class=""><img src="xmen.jpg" alt="Image" class="img-responsive"></a>
+                            </div>
+                            
+                        </div>
+                        <!--/row-->
+                    </div>
+                    <!--/item-->
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-sm-12"><a href="#x" class=""><img src="cont.jpeg" alt="Image" class="img-responsive"></a>
+                            </div>
+                            
+                        </div>
+                        <!--/row-->
+                    </div>
+                    <!--/item-->
+                </div>
+                <!--/carousel-inner--> <a class="left carousel-control" href="#myCarousel" data-slide="prev"></a>
+
+                <a class="right carousel-control" href="#myCarousel" data-slide="next"></a>
+            </div>
+            <!--/myCarousel-->
+        </div>
+        <!--/well-->
+    </div>
+</div>
+<br>
+</div>
+
+<br>
+<br>
+<br>
+<article style="background-color: black; color: white;">
+    <div class="container-fluid" style="height: 10px; background-color: rgb(41, 41, 41);"></div>
+    
+    
+    <div class="container" style="padding-top: 10%; padding-bottom: 5%;">
+    <h1 style="float: left;"><b>Enjoy on your TV.</b></h1>
+    <h3 style="float: left;">
+        Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.
+    </h3>
+    <img src="1.png" style="width:500px; float: right; margin-right: 10%;">
+    </div>
+
+    <div class="container-fluid" style="height: 10px; background-color: rgb(41, 41, 41);"></div>
+    <div class="container" style="padding-top: 10%; padding-bottom: 5%;">
+        <h1 style="float: right; margin-right: 25%;"><b>Download your shows to watch offline.</b></h1>
+        <h3 style="float: right; margin-right: 25%;">
+            Save your favourites easily and always have something to watch.
+        </h3>
+        <img src="2.png" style="width:500px; float: left;">
+        </div>
+
+    <div class="container-fluid" style="height: 10px; background-color: rgb(41, 41, 41);"></div>
+    <div class="container" style="padding-top: 10%; padding-bottom: 5%;">
+        <h1 style="float: left;"><b>Watch everywhere.</b></h1>
+        <h3 style="float: left;">
+            Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.
+        </h3>
+        <img src="3.png" style="width:500px; float: right; margin-right: 10%;">
+        </div>
+    
+        <div class="container-fluid" style="height: 10px; background-color: rgb(41, 41, 41);"></div>
+        <div class="container" style="padding-top: 10%; padding-bottom: 5%;">
+            <h1 style="float: right;"><b>Create profiles for children.</b></h1>
+            <h3 style="float: right;">
+                Send children on adventures with their favourite characters in a space made just for them—free with your membership.
+            </h3>
+            <img src="4.png" style="width:500px; float: left;">
+            </div>
+    <div class="container-fluid" style="height: 8px; background-color: rgb(41, 41, 41);"></div>
+
+</article>
+
+
+
+
+<footer class="bd-footer py-5 mt-5 bg-dark" style="font-variant: small-caps;background-color: black;color: gray;">
+    <div class="container py-5">
+    <div class="footer-cta pt-7 pb-7">  
+        <div class="row">  
+            <div class="col-xl-3 col-md-3 mb-30">  
+                <div class="single-cta">  
+                    <div class="cta-text">  
+                        <h3>Questions?</h3><h4><span class="glyphicon glyphicon-earphone"> </span> Call 000-800-040-1843</h4> <br>
+
+                        <div class="container py-5">
+    <div class="footer-cta pt-7 pb-7">  
+        <div class="row">  
+            <div class="col-xl-3 col-md-3 mb-30">  
+                <div class="single-cta">  
+                    <div class="cta-text">  
+
+                        <p><a href="#"> FAQs </a> </p>
+                        <p><a href="#"> Investor Relations</a></p>
+                        <p><a href="#"> Privacy </a></p>
+                        <p><a href="#"> Speed Test </a></p>
+                            
+                    </div>  
+                </div>  
+            </div>  
+            <div class="col-xl-3 col-md-3 mb-30">  
+                <div class="single-cta">  
+                    <i class="fas fa-phone"> </i>  
+                    <div class="cta-text">   
+                        <p><a href="#"> Help Centre </a></p>
+                        <p><a href="#"> Jobs </a></p>
+                        <p><a href="#"> Cookie Preferences </a></p>
+                        <p><a href="#"> Legal notices </a></p>
+                    </div>  
+                </div>  
+            </div>  
+            <div class="col-xl-3 col-md-3 mb-30">  
+                <div class="single-cta">  
+                    <i class="far fa-envelope-open"> </i>  
+                    <div class="cta-text">    
+                        <p><a href="#"> Account </a></p>
+                        <p><a href="#"> Ways to Watch </a></p>
+                        <p><a href="#"> Corporate Information </a></p>
+                        <p><a href="#"> Only on Snapflix </a></p>
+                    </div>  
+                </div>  
+            </div>  
+            <div class="col-xl-3 col-md-3 mb-30">  
+                <div class="single-cta">  
+                    <i class="fas fa-phone"> </i>  
+                    <div class="cta-text">   
+                        <p><a href="#"> Media Centre </a></p>
+                        <p><a href="#"> Terms of Use </a></p>
+                        <p><a href="#"> Contact Us </a></p>
+                        
+                    </div>  
+                </div>  
+            </div>  
+        </div>  
+    </div>  
+   
+<div class="copyright-area">  
+    <div class="container">  
+        <div class="row">  
+            <div class="col-xl-19 col-lg-19 text-center">  
+                <div class="copyright-text"> 
+                    <p></p><br> 
+                    <p> Copyright © 2022, All Right Reserved </p>  
+                </div>  
+            </div>  
+            </div>  
+        </div>  
+    </div>  
+</div>  
+</footer>  
+
+</body>
+
+</html>
